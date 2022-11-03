@@ -20,13 +20,16 @@ class Photo(models.Model):
     photo = models.ImageField()
     description = models.TextField(max_length=300, blank=True)
     tags = models.ForeignKey(Tag, on_delete=models.CASCADE)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
-    favourite = models.BooleanField(default=False)
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="photo_author"
+    )
+    favourite = models.ManyToManyField(User)
     deleted = models.BooleanField(default=False)
     deleted_date = models.DateTimeField(null=True)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
     meta = models.OneToOneField(PhotoMeta, on_delete=models.SET_NULL, null=True)
+    public = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.author} at {self.created}"
@@ -38,6 +41,9 @@ class Album(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     photos = models.ManyToManyField(Photo)
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="album_author"
+    )
 
     def __str__(self):
         return self.name
