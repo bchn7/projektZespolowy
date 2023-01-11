@@ -6,4 +6,3 @@ from . import models
 admin.site.register(models.Tag)
 admin.site.register(models.Photo)
 admin.site.register(models.Album)
-admin.site.register(models.PhotoMeta)

@@ -1,19 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-# Create your models here.
-
 
 class Tag(models.Model):
     name = models.CharField(max_length=50)
 
     def __str__(self) -> str:
         return self.name
-
-
-class PhotoMeta(models.Model):
-    width = models.IntegerField(blank=True)
-    height = models.IntegerField(blank=True)
 
 
 class Photo(models.Model):
@@ -24,12 +17,13 @@ class Photo(models.Model):
         User, on_delete=models.CASCADE, related_name="photo_author"
     )
     favourite = models.ManyToManyField(User)
-    deleted = models.BooleanField(default=False)
-    deleted_date = models.DateTimeField(null=True)
+    deleted = models.BooleanField(default=False, blank=True)
+    deleted_date = models.DateTimeField(null=True, blank=True)
     updated = models.DateTimeField(auto_now=True)
     created = models.DateTimeField(auto_now_add=True)
-    meta = models.OneToOneField(PhotoMeta, on_delete=models.SET_NULL, null=True)
     public = models.BooleanField(default=False)
+    width = models.IntegerField(null=True, blank=True)
+    height = models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.author} at {self.created}"
@@ -38,6 +32,7 @@ class Photo(models.Model):
 class Album(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=300, blank=True)
+    favourite = models.ManyToManyField(User)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     photos = models.ManyToManyField(Photo)

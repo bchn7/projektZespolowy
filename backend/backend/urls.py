@@ -22,6 +22,6 @@ from . import settings
 
 urlpatterns = [
     path("api/auth", include("accounts.urls")),
-    path("api/", include("accounts.urls")),
+    path("api/", include("core.urls")),
     path("admin/", admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
