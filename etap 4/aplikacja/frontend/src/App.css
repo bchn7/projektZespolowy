@@ -1,0 +1,351 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App{
+  background: linear-gradient(rgba(255,255,255,1), rgba(115,115,115,1));
+  background-size: auto;
+  min-height: 1080px;
+}
+
+.loginBox{
+    background: rgba(198,255,241,0.3100000023841858);
+    opacity: 1;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    overflow: hidden;
+    padding: 30px;
+}
+.logoBox{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    height: 100px;
+    width: 250px;
+
+}
+.logoBg{
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 183px;
+  height: 60px;
+  background: rgba(57,161,130,1);
+  opacity: 1;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  overflow: hidden;
+
+}
+.logo{
+  position: absolute;
+  top: 8px;
+  left: 19px;
+  width: 211px;
+  color: rgba(0,0,0,1);
+  font-family: B612 Mono;
+  font-weight: Bold;
+  font-size: 36px;
+  opacity: 1;
+  text-align: left;
+}
+.formLabel{
+  color: rgba(0,0,0,1);
+  font-family: B612 Mono;
+  font-weight: Bold;
+  font-size: 16px;
+  opacity: 1;
+  width: 100%;
+  text-align: left;
+}
+.formInput{
+  width: 100%;
+  border: none;
+  border-top: 3px solid rgba(57,161,130,1);
+  font-size: 16px;
+  padding: 5px;
+}
+.loginHeader{
+  color: rgba(0,0,0,1);
+  font-family: B612 Mono;
+  font-weight: Bold;
+}
+.formGroup{
+  margin: 30px 0px;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right !important;
+}
+.formButton{
+  background: rgba(57,161,130,1);
+  opacity: 1;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+  font-family: B612 Mono;
+  font-weight: Bold;
+  font-size: 20px !important;
+  color: rgba(255,255,255,1);
+  border: none;
+  padding: 8px;
+  max-width: 200px !important;
+}
+a{
+  text-decoration: none !important;
+}
+a:hover{
+  color: none !important;
+}
+
+.sm{
+  height: 60px;
+}
+.loginBtn{
+    background: rgba(217,217,217,1);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-size: 18px !important;
+    padding: 5px 40px !important;
+}
+.box{
+  background-color: rgba(198,255,241,0.3100000023841858);
+  padding: 20px;
+}
+.pageHeader{
+  color: rgba(0,0,0,1);
+  font-family: B612 Mono;
+  font-weight: Bold;
+  margin: 20px 0px;
+  text-align: left;
+}
+
+.photoThumbnail{
+    width: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.photoBox{
+  position: relative;
+  text-align: left;
+  margin-top: 15px;
+}
+.tagBadge{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-family: B612 Mono;
+  font-weight: Bold;
+  font-size: 16px;
+  background: rgba(40,255,242,1);
+}
+.nav-link{
+  font-family: B612 Mono;
+  font-weight: Bold;
+  font-size: 14px;
+}
+.noBorder{
+  border:none;
+}
+
+.searchOptionBox{
+  max-width: 500px !important;
+  
+}
+.searchInput{
+  max-width: 300px !important;
+}
+.center{
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+body{
+  padding: 0 !important;
+}
+.parent{
+  text-align: left;
+}
+.colorBase{
+  color: rgba(57,161,130,1);
+}
+.baseLine{
+  border-bottom: 3px solid rgba(57,161,130,1);
+}
+.addInfoBox{
+  vertical-align: center;
+  padding: 15px 0px;
+  height: 79px;
+}
+.gold{
+  color: goldenrod;
+  background: none;
+  border:none;
+}
+
+.tag{
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-family: B612 Mono;
+  font-weight: Bold;
+  font-size: 16px;
+  margin-right:10px;
+  background: rgba(40,255,242,1);
+}
+.commentBox{
+  padding: 10px;
+  background-color: rgba(57,161,130,0.3);
+  font-family: B612 Mono;
+  border-radius: 20px;
+  margin: 5px 0px;
+}
+.dropdown > button{
+    background: rgba(217,217,217,1) !important;
+    border: none !important;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    color: white;
+    font-size: 18px !important;
+    padding: 5px 40px !important;
+}
+.dropdown-toggle::after{
+  display:none !important;
+}
+.addDialog{
+  --bs-modal-width: 950px;
+  background: rgb(32, 206, 194) !important;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.addDialog > .modal-content{
+  background: rgb(32, 206, 194) !important;
+  border:none;
+}
+
+.addDialog > .modal-content > .modal-header{
+  border:none;
+}
+.dialogContainer{
+  background: #aaaaaa;
+  padding: 10px;
+  border-radius: 5px;;
+}
+input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 6px 18px !important;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.albumsBox{
+  padding: 5px;
+  color: silver;
+}
+
+.tagBox{
+  position: relative;
+  float: left;
+}
+.deleteIcon{
+  position: absolute;
+  top: -10px;
+  right: 5px;
+  padding: 2px 8px 4px 8px;
+  background: rgba(57,161,130,1);
+  font-weight: bold;
+  border-radius: 50%;
+  vertical-align: center;
+}
+.btnBox{
+  margin: 5px 0px 15px 0px;
+}
+.marginHor{
+  margin-right: 5px;
+}
+
+.albumBox{
+  padding: 15px;
+  background-color: rgba(198,255,241,0.7);
+  border-radius: 15px;
+  margin: 10px 0px;
+}
+.center{
+  text-align: center;
+}
+.textLeft{
+  text-align: left;
+}
+.miniPhoto{
+  width: 80px;
+}
+.userIcon{
+  color: rgba(57,161,130,1);
+  padding: 5px;
+}
+.userInfo > p {
+  margin: 0px !important;
+  text-align: left;
+}
+.userInfo{
+  padding: 5px 0px;
+}
